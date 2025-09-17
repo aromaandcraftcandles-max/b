@@ -5,6 +5,139 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact Us - Aroma and Crafts Candle</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Additional contact page styles */
+    body {
+      background: linear-gradient(135deg, #fff8f0 0%, #f1e0d6 100%);
+      color: #50382f;
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+    }
+    header {
+      background: #f9e8d7;
+      border-bottom: 2px solid #d2691e;
+      padding: 20px 10px;
+      text-align: center;
+      color: #50382f;
+      position: sticky;
+      top: 0;
+      box-shadow: 0 3px 6px rgb(210 105 30 / 0.25);
+      z-index: 999;
+    }
+    header h1 {
+      font-weight: 700;
+      margin-bottom: 8px;
+      font-size: 1.8rem;
+    }
+    nav a {
+      color: #555;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+    nav a:hover, nav a.active {
+      color: #d2691e;
+    }
+    .contact-info {
+      margin-top: 6px;
+      font-size: 1rem;
+      color: #7a6550;
+    }
+    section#contact {
+      max-width: 480px;
+      margin: 40px auto 60px;
+      background: white;
+      border-radius: 14px;
+      box-shadow: 0 4px 20px rgb(210 105 30 / 0.3);
+      padding: 25px 30px;
+    }
+    section#contact h2 {
+      text-align: center;
+      font-weight: 700;
+      color: #d2691e;
+      font-size: 2rem;
+      margin-bottom: 24px;
+      border-bottom: 2px solid #d2691e;
+      padding-bottom: 8px;
+    }
+    form#contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    form#contact-form input[type="text"],
+    form#contact-form input[type="email"],
+    form#contact-form textarea {
+      width: 100%;
+      padding: 14px 18px;
+      border-radius: 10px;
+      border: 2px solid #d2691e;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #50382f;
+      resize: vertical;
+      transition: border-color 0.3s ease;
+      box-shadow: inset 0 2px 5px rgb(210 105 30 / 0.15);
+    }
+    form#contact-form input[type="text"]::placeholder,
+    form#contact-form input[type="email"]::placeholder,
+    form#contact-form textarea::placeholder {
+      color: #d2691e99;
+      font-style: italic;
+    }
+    form#contact-form input[type="text"]:focus,
+    form#contact-form input[type="email"]:focus,
+    form#contact-form textarea:focus {
+      outline: none;
+      border-color: #a74e13;
+    }
+    form#contact-form textarea {
+      min-height: 120px;
+    }
+    form#contact-form button {
+      align-self: center;
+      background-color: #d2691e;
+      border: none;
+      color: white;
+      font-size: 1.15rem;
+      font-weight: 700;
+      padding: 14px 60px;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 6px 18px rgba(210, 105, 30, 0.6);
+    }
+    form#contact-form button:hover {
+      background-color: #a74e13;
+    }
+    footer {
+      background: #f4e7dc;
+      text-align: center;
+      padding: 18px 10px;
+      font-weight: 600;
+      color: #50382f;
+      box-shadow: inset 0 6px 10px rgb(210 105 30 / 0.1);
+      border-top: 1px solid #d2691e;
+    }
+    footer a {
+      color: #d2691e;
+      font-weight: 700;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      section#contact {
+        margin: 30px 15px 50px;
+        padding: 20px;
+      }
+      form#contact-form button {
+        padding: 14px 40px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -12,7 +145,7 @@
     <nav>
       <a href="index.html#home">Home</a>
       <a href="index.html#products">Products</a>
-      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="active">Contact</a>
     </nav>
     <div class="contact-info">
       <p>| Email: aromaandcraftcandles@gmail.com</p>
@@ -22,9 +155,9 @@
   <section id="contact">
     <h2>Contact Us</h2>
     <form id="contact-form">
-      <input type="text" id="name" placeholder="" required />
-      <input type="email" id="email" placeholder="" required />
-      <textarea id="message" placeholder="" required></textarea>
+      <input type="text" id="name" placeholder="Your Full Name" required />
+      <input type="email" id="email" placeholder="Your Email Address" required />
+      <textarea id="message" placeholder="Your Message" required></textarea>
       <button type="submit">Send</button>
     </form>
   </section>
@@ -32,7 +165,5 @@
   <footer>
     <p>Follow us on Instagram: <a href="https://instagram.com/aromaandcraftscandle" target="_blank">@aromaandcraftscandle</a></p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
